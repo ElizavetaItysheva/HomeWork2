@@ -1,38 +1,48 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Домашняя работа~");
-        int start1 = 6;
-        int end1 =6;
-        int start2 = 6;
-        int end2 = 6;
-        if (start1 > start2 && end1 > end2) {
-            int start3 = start1;
-            int end3 = end2;
-            System.out.println(start3 + ", " + end3 + " - координаты пересечения.");
-        } else if (start1 < start2 && end1 < end2 && end1 == start2) {
-            System.out.println(end1 + " - координата пересечения.");
-        } else if (start1 > start2 && end1 < end2) {
-            int start3 = end1;
-            int end3 = start1;
-            System.out.println(start3 + ", " + end3 + " - координаты пересечения.");
-        } else if (start1 < start2 && end1 > end2) {
-            int start3 = start2;
-            int end3 = end2;
-            System.out.println(start3 + ", " + end3 + " - координаты пересечения.");
-        } else if (start1 > start2 && end1 > end2 && end1 == start2) {
-            {
-                System.out.println(end1 + " - координата пересечения");
-            }
-        } else if (start1 < start2 && end1 < end2) {
-            int start3 = start2;
-            int end3 = end1;
-            System.out.println(start3 + ", " + end3 +  " - координаты пересечения.");
-        }else if (start1 == start2 && end1 == end2){
-            int start3 = start1;
-            int end3 = end1;
-            System.out.println(start3 + ", " + end3 + " - координаты пересечения.");
+        int a1 = 5;
+        int b1 = 5;
+        int a2 = 5;
+        int b2 = 5;
+        if ((a1 < a2 && b1 < a2)||(a2 < a1 && b2 < a1)) {
+            System.out.println(" Отрезки не пересекаются.");
+        } else if (a1 < a2 && a1 < b2) {
+            int a3 = a2;
+            int b3 = b1;
+            System.out.println(a3 + ", " + b3 + " - координаты пересечения.");
+        } else if (a2 < a1 && a2 < b1) {
+            int a3 = a1;
+            int b3 = b2;
+            System.out.println(a3 + ", " + b3 + " - координаты пересечения.");
+        } else  if (a1 == a2 && b1 < b2){
+            int a3 = a1;
+            int b3 = b1;
+            System.out.println(a3 + ", " + b3 + " - координаты пересечения.");
+        } else if (a1 == a2 && b2 < b1){
+            int a3 = a1;
+            int b3 = b2;
+            System.out.println(a3 + ", " + b3 + " - координаты пересечения.");
+        } else if (b1 == b2 && a1 < a2) {
+            int a3 = a1;
+            int b3 = b1;
+            System.out.println(a3 + ", " + b3 + " - координаты пересечения.");
+        } else if (b1 == b2 && a2 < a1) {
+            int a3 = a2;
+            int b3 = b1;
+            System.out.println(a3 + ", " + b3 + " - координаты пересечения.");
+        } else if (a1 < a2 && b2 < b1) {
+            int a3 = a2;
+            int b3 = b2;
+            System.out.println(a3 + ", " + b3 + " - координаты пересечения.");
+        } else if (a2 < a1 && b1 < b2) {
+            int a3 = a1;
+            int b3 = b1;
+            System.out.println(a3 + ", " + b3 + " - координаты пересечения.");
+        } else if (a1 == a2 && b1 == b2) {
+            System.out.println(a1 + ", " + b1 + " - координаты пересечения. (отрезки совпали)");
         } else {
-            System.out.println("Нет пересечения.");
+            System.out.println("Не понимаю...");
         }
     }
 }
